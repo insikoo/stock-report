@@ -17,9 +17,10 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic yfinance requests
       - name: Run stock report
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        KAKAO_TOKEN: ${{ secrets.KAKAO_TOKEN }}
         run: python stock_report.py
       - name: Commit and push
         run: |

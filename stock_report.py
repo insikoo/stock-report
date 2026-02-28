@@ -8,7 +8,7 @@ from datetime import datetime
 
 # API 설정
 claude_client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
-KAKAO_TOKEN = "P2nn3EVSP76boQ07bsO9b_3FoRYtTproAAAAAQoXIS0AAAGcn-Na4Crd4XW-Oo9G"
+KAKAO_TOKEN = os.environ.get("KAKAO_TOKEN")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_USER = "insikoo"
 GITHUB_REPO = "stock-report"
